@@ -26,7 +26,7 @@ export const Header = () => {
             <img
               src={logoImage}
               alt="African Transformative Voice Logo"
-              className="w-12 h-12 object-contain"
+              className="w-12 h-12 object-cover rounded-full"
             />
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-lg text-foreground">

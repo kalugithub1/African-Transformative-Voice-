@@ -6,8 +6,8 @@
 
 @layer base {
   :root {
-    /* Primary: Deep blue - trust, professionalism, hope */
-    --primary: 217 71% 45%;
+    /* Primary: Rich blue - trust, professionalism, hope */
+    --primary: 210 100% 40%;
     --primary-foreground: 45 30% 96%;
     
     /* Secondary: Warm amber/gold - warmth, optimism */
@@ -41,27 +41,28 @@
     --border: 45 20% 88%;
     --input: 45 20% 88%;
     --ring: 217 71% 45%;
+    --ring: 210 100% 40%;
     
     --radius: 0.75rem;
     
     /* Sidebar */
-    --sidebar-background: 217 71% 45%;
+    --sidebar-background: 210 100% 40%;
     --sidebar-foreground: 45 30% 96%;
     --sidebar-primary: 38 92% 50%;
     --sidebar-primary-foreground: 217 71% 12%;
-    --sidebar-accent: 217 60% 55%;
+    --sidebar-accent: 210 80% 50%;
     --sidebar-accent-foreground: 45 30% 96%;
-    --sidebar-border: 217 60% 55%;
+    --sidebar-border: 210 80% 50%;
     --sidebar-ring: 38 92% 50%;
     
     /* Custom variables for this design */
-    --hero-overlay: 217 71% 12%;
+    --hero-overlay: 210 100% 15%;
     --section-alt: 45 25% 95%;
   }
 
   .dark {
-    --primary: 217 71% 70%;
-    --primary-foreground: 217 71% 10%;
+    --primary: 210 100% 65%;
+    --primary-foreground: 210 100% 10%;
     
     --secondary: 38 92% 50%;
     --secondary-foreground: 217 71% 10%;
@@ -86,9 +87,9 @@
     
     --border: 217 20% 18%;
     --input: 217 20% 18%;
-    --ring: 217 71% 70%;
+    --ring: 210 100% 65%;
     
-    --sidebar-background: 217 25% 6%;
+    --sidebar-background: 210 25% 6%;
     --sidebar-foreground: 45 20% 94%;
     --sidebar-primary: 38 92% 50%;
     --sidebar-primary-foreground: 217 71% 10%;

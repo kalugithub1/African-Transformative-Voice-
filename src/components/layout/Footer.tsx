@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Heart, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import logoImage from "@/assets/logo.ico";
 
 const quickLinks = [
   { name: "Home", path: "/" },
@@ -54,9 +55,11 @@ export const Footer = () => {
           {/* Brand */}
           <div className="space-y-6">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
-                <Heart className="w-6 h-6 text-secondary-foreground" />
-              </div>
+              <img
+                src={logoImage}
+                alt="African Transformative Voice Logo"
+                className="w-12 h-12 object-cover rounded-full"
+              />
               <span className="font-heading font-bold text-lg">
                 African Transformative Voice
               </span>

@@ -20,9 +20,8 @@ import heroImage from "@/assets/mentoring.jpeg";
 const bankDetails = {
   bankName: "Equity Bank",
   accountName: "African Transformative Voice",
-  accountNumber: "1450273427818",
-  branch: "Kakuma Branch",
-  swiftCode: "EABORWA",
+  accountNumber: "0310284810220",
+  paybill: "247247",
 };
 
 const involvementOptions = [
@@ -157,34 +156,31 @@ const GetInvolved = () => {
                   <h3 className="text-2xl font-heading font-bold text-foreground">
                     {bankDetails.bankName}
                   </h3>
-                  <p className="text-muted-foreground">{bankDetails.branch}</p>
+                  <p className="text-muted-foreground">Make Your Donation</p>
                 </div>
               </div>
 
               <div className="space-y-4">
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span className="text-muted-foreground">Account Name</span>
-                  <span className="font-semibold text-foreground">
+                  <span className="font-semibold text-secondary">
                     {bankDetails.accountName}
                   </span>
                 </div>
                 <div className="flex justify-between items-center py-3 border-b border-border">
-                  <span className="text-muted-foreground">Account Number</span>
-                  <span className="font-semibold text-foreground font-mono">
-                    {bankDetails.accountNumber}
+                  <span className="text-muted-foreground">Paybill</span>
+                  <span className="font-semibold text-secondary font-mono">
+                    {bankDetails.paybill}
                   </span>
                 </div>
                 <div className="flex justify-between items-center py-3">
-                  <span className="text-muted-foreground">SWIFT Code</span>
-                  <span className="font-semibold text-foreground font-mono">
-                    {bankDetails.swiftCode}
+                  <span className="text-muted-foreground">Account Number</span>
+                  <span className="font-semibold text-secondary font-mono">
+                    {bankDetails.accountNumber}
                   </span>
                 </div>
               </div>
 
-              <p className="mt-6 text-sm text-muted-foreground text-center">
-                Please include your name and "ATV Donation" in the transfer reference.
-              </p>
             </div>
           </motion.div>
         </div>
