@@ -12,9 +12,18 @@ import {
   ArrowRight,
   Mail,
   Phone,
+  Building2,
 } from "lucide-react";
 
 import heroImage from "@/assets/mentoring.jpeg";
+
+const bankDetails = {
+  bankName: "Equity Bank",
+  accountName: "African Transformative Voice",
+  accountNumber: "1450273427818",
+  branch: "Kakuma Branch",
+  swiftCode: "EABORWA",
+};
 
 const involvementOptions = [
   {
@@ -120,6 +129,64 @@ const GetInvolved = () => {
               </motion.div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Bank Account Details Section */}
+      <section className="section-padding bg-background">
+        <div className="container-wide">
+          <SectionHeader
+            label="Donate"
+            title="Bank Account Details"
+            description="Support our mission by making a direct bank transfer to our official account."
+          />
+
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="max-w-2xl mx-auto"
+          >
+            <div className="bg-card rounded-2xl p-8 shadow-lg border border-border">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
+                  <Building2 className="w-8 h-8 text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-heading font-bold text-foreground">
+                    {bankDetails.bankName}
+                  </h3>
+                  <p className="text-muted-foreground">{bankDetails.branch}</p>
+                </div>
+              </div>
+
+              <div className="space-y-4">
+                <div className="flex justify-between items-center py-3 border-b border-border">
+                  <span className="text-muted-foreground">Account Name</span>
+                  <span className="font-semibold text-foreground">
+                    {bankDetails.accountName}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center py-3 border-b border-border">
+                  <span className="text-muted-foreground">Account Number</span>
+                  <span className="font-semibold text-foreground font-mono">
+                    {bankDetails.accountNumber}
+                  </span>
+                </div>
+                <div className="flex justify-between items-center py-3">
+                  <span className="text-muted-foreground">SWIFT Code</span>
+                  <span className="font-semibold text-foreground font-mono">
+                    {bankDetails.swiftCode}
+                  </span>
+                </div>
+              </div>
+
+              <p className="mt-6 text-sm text-muted-foreground text-center">
+                Please include your name and "ATV Donation" in the transfer reference.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 

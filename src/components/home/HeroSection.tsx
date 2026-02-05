@@ -71,7 +71,7 @@ export const HeroSection = () => {
               asChild
               size="lg"
               variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="border-primary-foreground bg-primary-foreground/10 text-primary-foreground hover:bg-primary-foreground/20"
             >
               <Link to="/about">
                 <Play className="mr-2 w-5 h-5" />

@@ -6,13 +6,13 @@
 
 @layer base {
   :root {
-    /* Primary: Deep forest green - represents growth, hope, nature */
-    --primary: 152 45% 22%;
+    /* Primary: Deep blue - trust, professionalism, hope */
+    --primary: 217 71% 45%;
     --primary-foreground: 45 30% 96%;
     
-    /* Secondary: Warm amber/gold - African warmth, optimism */
-    --secondary: 38 75% 55%;
-    --secondary-foreground: 152 45% 12%;
+    /* Secondary: Warm amber/gold - warmth, optimism */
+    --secondary: 38 92% 50%;
+    --secondary-foreground: 217 71% 12%;
     
     /* Accent: Terracotta - earth, Africa */
     --accent: 18 70% 50%;
@@ -20,18 +20,18 @@
     
     /* Backgrounds */
     --background: 45 30% 98%;
-    --foreground: 152 25% 15%;
+    --foreground: 217 25% 15%;
     
     /* Cards and surfaces */
     --card: 45 25% 99%;
-    --card-foreground: 152 25% 15%;
+    --card-foreground: 217 25% 15%;
     
     --popover: 45 25% 99%;
-    --popover-foreground: 152 25% 15%;
+    --popover-foreground: 217 25% 15%;
     
     /* Muted elements */
     --muted: 45 20% 94%;
-    --muted-foreground: 152 15% 40%;
+    --muted-foreground: 217 15% 40%;
     
     /* Destructive */
     --destructive: 0 72% 51%;
@@ -40,62 +40,62 @@
     /* Borders and inputs */
     --border: 45 20% 88%;
     --input: 45 20% 88%;
-    --ring: 152 45% 22%;
+    --ring: 217 71% 45%;
     
     --radius: 0.75rem;
     
     /* Sidebar */
-    --sidebar-background: 152 45% 22%;
+    --sidebar-background: 217 71% 45%;
     --sidebar-foreground: 45 30% 96%;
-    --sidebar-primary: 38 75% 55%;
-    --sidebar-primary-foreground: 152 45% 12%;
-    --sidebar-accent: 152 35% 28%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 217 71% 12%;
+    --sidebar-accent: 217 60% 55%;
     --sidebar-accent-foreground: 45 30% 96%;
-    --sidebar-border: 152 35% 28%;
-    --sidebar-ring: 38 75% 55%;
+    --sidebar-border: 217 60% 55%;
+    --sidebar-ring: 38 92% 50%;
     
     /* Custom variables for this design */
-    --hero-overlay: 152 45% 12%;
+    --hero-overlay: 217 71% 12%;
     --section-alt: 45 25% 95%;
   }
 
   .dark {
-    --primary: 152 45% 70%;
-    --primary-foreground: 152 45% 10%;
+    --primary: 217 71% 70%;
+    --primary-foreground: 217 71% 10%;
     
-    --secondary: 38 75% 55%;
-    --secondary-foreground: 152 45% 10%;
+    --secondary: 38 92% 50%;
+    --secondary-foreground: 217 71% 10%;
     
     --accent: 18 70% 55%;
     --accent-foreground: 45 30% 96%;
     
-    --background: 152 25% 8%;
+    --background: 217 25% 8%;
     --foreground: 45 20% 94%;
     
-    --card: 152 25% 10%;
+    --card: 217 25% 10%;
     --card-foreground: 45 20% 94%;
     
-    --popover: 152 25% 10%;
+    --popover: 217 25% 10%;
     --popover-foreground: 45 20% 94%;
     
-    --muted: 152 20% 15%;
+    --muted: 217 20% 15%;
     --muted-foreground: 45 15% 60%;
     
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
     
-    --border: 152 20% 18%;
-    --input: 152 20% 18%;
-    --ring: 152 45% 70%;
+    --border: 217 20% 18%;
+    --input: 217 20% 18%;
+    --ring: 217 71% 70%;
     
-    --sidebar-background: 152 25% 6%;
+    --sidebar-background: 217 25% 6%;
     --sidebar-foreground: 45 20% 94%;
-    --sidebar-primary: 38 75% 55%;
-    --sidebar-primary-foreground: 152 45% 10%;
-    --sidebar-accent: 152 25% 12%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 217 71% 10%;
+    --sidebar-accent: 217 25% 12%;
     --sidebar-accent-foreground: 45 20% 94%;
-    --sidebar-border: 152 20% 18%;
-    --sidebar-ring: 38 75% 55%;
+    --sidebar-border: 217 20% 18%;
+    --sidebar-ring: 38 92% 50%;
   }
 }
 
