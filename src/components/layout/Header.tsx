@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Heart } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImage from "@/assets/logo.ico";
 
 const navLinks = [
   { name: "Home", path: "/" },
@@ -22,9 +23,11 @@ export const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-full bg-primary flex items-center justify-center">
-              <Heart className="w-6 h-6 text-primary-foreground" />
-            </div>
+            <img
+              src={logoImage}
+              alt="African Transformative Voice Logo"
+              className="w-12 h-12 object-contain"
+            />
             <div className="hidden sm:block">
               <span className="font-heading font-bold text-lg text-foreground">
                 African Transformative Voice
