@@ -83,8 +83,8 @@ const GetInvolved = () => {
             <p className="text-muted-foreground leading-relaxed text-lg">
               At the heart of our mission is a commitment to empowering youth
               and building stronger, more sustainable communities. Through our
-              impactful programs — including scholarships, mentorship, digital
-              literacy training, and environmental preservation — we provide
+              impactful programs, including scholarships, mentorship, digital
+              literacy training, and environmental preservation, we provide
               young people with the tools, guidance, and opportunities they need
               to thrive. By joining us, you are not just supporting a cause, you
               are becoming part of a movement that uplifts lives, nurtures
@@ -97,10 +97,7 @@ const GetInvolved = () => {
       {/* Ways to Get Involved */}
       <section className="section-padding bg-muted">
         <div className="container-wide">
-          <SectionHeader
-            label="How to Help"
-            title="Ways to Get Involved"
-          />
+          <SectionHeader label="How to Help" title="Ways to Get Involved" />
 
           <div className="grid md:grid-cols-2 gap-8">
             {involvementOptions.map((option, index) => (
@@ -180,7 +177,6 @@ const GetInvolved = () => {
                   </span>
                 </div>
               </div>
-
             </div>
           </motion.div>
         </div>
@@ -268,7 +264,6 @@ const GetInvolved = () => {
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary"
-                      placeholder="John"
                     />
                   </div>
                   <div>
@@ -278,7 +273,6 @@ const GetInvolved = () => {
                     <input
                       type="text"
                       className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary"
-                      placeholder="Doe"
                     />
                   </div>
                 </div>
@@ -289,7 +283,6 @@ const GetInvolved = () => {
                   <input
                     type="email"
                     className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary"
-                    placeholder="john@example.com"
                   />
                 </div>
                 <div>
@@ -298,11 +291,21 @@ const GetInvolved = () => {
                   </label>
                   <select className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground focus:outline-none focus:ring-2 focus:ring-secondary">
                     <option value="">Select an option</option>
-                    <option value="donate">Donate</option>
-                    <option value="volunteer">Volunteer</option>
-                    <option value="partner">Partner with us</option>
-                    <option value="sponsor">Sponsor a student</option>
-                    <option value="other">Other</option>
+                    <option className="text-black" value="donate">
+                      Donate
+                    </option>
+                    <option className="text-black" value="volunteer">
+                      Volunteer
+                    </option>
+                    <option className="text-black" value="partner">
+                      Partner with us
+                    </option>
+                    <option className="text-black" value="sponsor">
+                      Sponsor a student
+                    </option>
+                    <option className="text-black" value="other">
+                      Other
+                    </option>
                   </select>
                 </div>
                 <div>

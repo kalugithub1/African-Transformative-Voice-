@@ -1,7 +1,13 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Heart, HandHelping, Users, GraduationCap } from "lucide-react";
+import {
+  ArrowRight,
+  Heart,
+  HandHelping,
+  Users,
+  GraduationCap,
+} from "lucide-react";
 import ctaImage from "@/assets/mentoring.jpeg";
 
 const involvementOptions = [
@@ -50,7 +56,7 @@ export const CTASection = () => {
               We cannot do this alone. At the heart of our mission is a
               commitment to empowering youth and building stronger, more
               sustainable communities. By joining us, you are not just
-              supporting a cause — you are becoming part of a movement that
+              supporting a cause, you are becoming part of a movement that
               uplifts lives, nurtures talent, and drives positive change across
               generations.
             </p>
@@ -69,7 +75,9 @@ export const CTASection = () => {
                   <div className="w-10 h-10 bg-secondary/20 rounded-full flex items-center justify-center">
                     <option.icon className="w-5 h-5 text-secondary" />
                   </div>
-                  <span className="font-medium text-foreground">{option.label}</span>
+                  <span className="font-medium text-foreground">
+                    {option.label}
+                  </span>
                 </motion.div>
               ))}
             </div>

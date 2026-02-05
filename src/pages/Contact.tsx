@@ -79,9 +79,7 @@ const Contact = () => {
               <h3 className="text-xl font-heading font-semibold text-foreground mb-4">
                 Visit Us
               </h3>
-              <p className="text-muted-foreground">
-                Shabab, Nakuru, Kenya
-              </p>
+              <p className="text-muted-foreground">Shabab, Nakuru, Kenya</p>
             </motion.div>
           </div>
         </div>
@@ -114,7 +112,6 @@ const Contact = () => {
                       type="text"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                      placeholder="John"
                     />
                   </div>
                   <div>
@@ -125,7 +122,6 @@ const Contact = () => {
                       type="text"
                       required
                       className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                      placeholder="Doe"
                     />
                   </div>
                 </div>
@@ -138,7 +134,6 @@ const Contact = () => {
                     type="email"
                     required
                     className="w-full px-4 py-3 rounded-lg bg-background border border-border text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                    placeholder="john@example.com"
                   />
                 </div>
 

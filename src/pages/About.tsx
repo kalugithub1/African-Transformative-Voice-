@@ -11,7 +11,10 @@ import heroImage from "@/assets/digital-literacy.jpeg";
 import trainingImage from "@/assets/digital-training.jpeg";
 import orgStructure from "@/assets/org-structure.png";
 import teamLuat from "@/assets/team-luat.jpeg";
+import teamSantino from "@/assets/team-Santino.jpeg";
 import teamMaker from "@/assets/team-maker.jpeg";
+import teamAkuok from "@/assets/akuok-image.jpeg";
+import teamAluong from "@/assets/team-Aluong.jpeg";
 import boardAndhira from "@/assets/board-andhira.jpeg";
 import boardDivine from "@/assets/board-divine.jpeg";
 import boardNicholas from "@/assets/board-nicholas.jpeg";
@@ -32,7 +35,7 @@ const founders = [
     name: "Santino Geng",
     role: "Chief Executive Officer",
     type: "Founder",
-    image: null,
+    image: teamSantino,
   },
   {
     name: "Nyok Luat Dudi",
@@ -50,13 +53,13 @@ const founders = [
     name: "Aluong Deng Dau",
     role: "Director",
     type: "Co-Founder",
-    image: null,
+    image: teamAluong,
   },
   {
     name: "R. Akuok",
     role: "Program Coordinator",
     type: "Co-Founder",
-    image: null,
+    image: teamAkuok,
   },
 ];
 
@@ -259,10 +262,7 @@ const About = () => {
       {/* Organization Structure */}
       <section className="section-padding bg-muted">
         <div className="container-wide">
-          <SectionHeader
-            label="Organization"
-            title="Our Structure"
-          />
+          <SectionHeader label="Organization" title="Our Structure" />
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -341,17 +341,16 @@ const About = () => {
                   <p className="text-sm text-primary font-medium mb-1">
                     {founder.role}
                   </p>
-                  <p className="text-xs text-muted-foreground">{founder.type}</p>
+                  <p className="text-xs text-muted-foreground">
+                    {founder.type}
+                  </p>
                 </div>
               </motion.div>
             ))}
           </div>
 
           {/* Board of Directors */}
-          <SectionHeader
-            label="Leadership"
-            title="Board of Directors"
-          />
+          <SectionHeader label="Leadership" title="Board of Directors" />
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {boardMembers.map((member, index) => (
               <motion.div

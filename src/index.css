@@ -2,49 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
 
 @layer base {
   :root {
     /* Primary: Rich blue - trust, professionalism, hope */
     --primary: 210 100% 40%;
     --primary-foreground: 45 30% 96%;
-    
+
     /* Secondary: Warm amber/gold - warmth, optimism */
     --secondary: 38 92% 50%;
     --secondary-foreground: 217 71% 12%;
-    
+
     /* Accent: Terracotta - earth, Africa */
     --accent: 18 70% 50%;
     --accent-foreground: 45 30% 96%;
-    
+
     /* Backgrounds */
     --background: 45 30% 98%;
     --foreground: 217 25% 15%;
-    
+
     /* Cards and surfaces */
     --card: 45 25% 99%;
     --card-foreground: 217 25% 15%;
-    
+
     --popover: 45 25% 99%;
     --popover-foreground: 217 25% 15%;
-    
+
     /* Muted elements */
     --muted: 45 20% 94%;
     --muted-foreground: 217 15% 40%;
-    
+
     /* Destructive */
     --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 100%;
-    
+
     /* Borders and inputs */
     --border: 45 20% 88%;
     --input: 45 20% 88%;
     --ring: 217 71% 45%;
     --ring: 210 100% 40%;
-    
+
     --radius: 0.75rem;
-    
+
     /* Sidebar */
     --sidebar-background: 210 100% 40%;
     --sidebar-foreground: 45 30% 96%;
@@ -54,7 +54,7 @@
     --sidebar-accent-foreground: 45 30% 96%;
     --sidebar-border: 210 80% 50%;
     --sidebar-ring: 38 92% 50%;
-    
+
     /* Custom variables for this design */
     --hero-overlay: 210 100% 15%;
     --section-alt: 45 25% 95%;
@@ -63,32 +63,32 @@
   .dark {
     --primary: 210 100% 65%;
     --primary-foreground: 210 100% 10%;
-    
+
     --secondary: 38 92% 50%;
     --secondary-foreground: 217 71% 10%;
-    
+
     --accent: 18 70% 55%;
     --accent-foreground: 45 30% 96%;
-    
+
     --background: 217 25% 8%;
     --foreground: 45 20% 94%;
-    
+
     --card: 217 25% 10%;
     --card-foreground: 45 20% 94%;
-    
+
     --popover: 217 25% 10%;
     --popover-foreground: 45 20% 94%;
-    
+
     --muted: 217 20% 15%;
     --muted-foreground: 45 15% 60%;
-    
+
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 100%;
-    
+
     --border: 217 20% 18%;
     --input: 217 20% 18%;
     --ring: 210 100% 65%;
-    
+
     --sidebar-background: 210 25% 6%;
     --sidebar-foreground: 45 20% 94%;
     --sidebar-primary: 38 92% 50%;
@@ -104,7 +104,7 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
@@ -112,8 +112,13 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-heading font-semibold tracking-tight;
   }
 }
@@ -122,31 +127,31 @@
   .section-padding {
     @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
   }
-  
+
   .container-narrow {
     @apply max-w-5xl mx-auto;
   }
-  
+
   .container-wide {
     @apply max-w-7xl mx-auto;
   }
-  
+
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .gradient-text-gold {
     @apply bg-clip-text text-transparent bg-gradient-to-r from-secondary to-accent;
   }
-  
+
   .card-hover {
     @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-1;
   }
-  
+
   .image-overlay {
     @apply absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-transparent;
   }
-  
+
   .stat-number {
     @apply text-4xl md:text-5xl lg:text-6xl font-bold font-heading;
   }
@@ -156,11 +161,11 @@
   .animate-fade-up {
     animation: fadeUp 0.6s ease-out forwards;
   }
-  
+
   .animate-fade-in {
     animation: fadeIn 0.6s ease-out forwards;
   }
-  
+
   @keyframes fadeUp {
     from {
       opacity: 0;
@@ -171,7 +176,7 @@
       transform: translateY(0);
     }
   }
-  
+
   @keyframes fadeIn {
     from {
       opacity: 0;
