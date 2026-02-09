@@ -14,7 +14,7 @@ export const HeroSection = () => {
           alt="African Transformative Voice community"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/70 via-primary/50 to-primary/30" />
       </div>
 
       {/* Content */}

@@ -6,7 +6,11 @@ interface PageHeroProps {
   backgroundImage?: string;
 }
 
-export const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) => {
+export const PageHero = ({
+  title,
+  subtitle,
+  backgroundImage,
+}: PageHeroProps) => {
   return (
     <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -17,7 +21,7 @@ export const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) =>
             alt=""
             className="w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-primary/80" />
+          <div className="absolute inset-0 bg-primary/50" />
         </div>
       )}
 
@@ -41,7 +45,7 @@ export const PageHero = ({ title, subtitle, backgroundImage }: PageHeroProps) =>
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl mx-auto"
+            className="text-lg md:text-xl text-primary-foreground/80 max-w-2xl font-bold mx-auto"
           >
             {subtitle}
           </motion.p>

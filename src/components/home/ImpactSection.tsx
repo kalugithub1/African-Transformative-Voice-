@@ -1,33 +1,67 @@
-import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import {
+  motion,
+  useMotionValue,
+  useTransform,
+  animate,
+  useInView,
+} from "framer-motion";
 import { GraduationCap, Users, Monitor, TreePine } from "lucide-react";
 
+/* ---------- Count Up Component ---------- */
+const CountUp = ({ value, duration = 1.5 }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const motionValue = useMotionValue(0);
+  const rounded = useTransform(motionValue, Math.round);
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const controls = animate(motionValue, value, {
+      duration,
+      ease: "easeOut",
+    });
+
+    return controls.stop;
+  }, [isInView, value, duration, motionValue]);
+
+  return <motion.span ref={ref}>{rounded}</motion.span>;
+};
+
+/* ---------- Stats Data ---------- */
 const stats = [
   {
     icon: GraduationCap,
-    number: "5+",
+    number: 5,
+    suffix: "+",
     label: "Students Sponsored",
     description: "Scholarships awarded to refugee youth",
   },
   {
     icon: Users,
-    number: "200+",
+    number: 200,
+    suffix: "+",
     label: "Youths Mentored",
     description: "Receiving guidance and support",
   },
   {
     icon: Monitor,
-    number: "200+",
+    number: 200,
+    suffix: "+",
     label: "Digital Literacy",
     description: "Youth taught essential tech skills",
   },
   {
     icon: TreePine,
-    number: "50+",
+    number: 50,
+    suffix: "+",
     label: "Trees Planted",
     description: "Environmental action initiatives",
   },
 ];
 
+/* ---------- Impact Section ---------- */
 export const ImpactSection = () => {
   return (
     <section className="section-padding bg-primary">
@@ -46,8 +80,8 @@ export const ImpactSection = () => {
             Making a Difference
           </h2>
           <p className="text-primary-foreground/70 max-w-2xl mx-auto">
-            Every number represents a life transformed, a community strengthened,
-            and a future brightened.
+            Every number represents a life transformed, a community
+            strengthened, and a future brightened.
           </p>
         </motion.div>
 
@@ -64,12 +98,16 @@ export const ImpactSection = () => {
               <div className="w-16 h-16 mx-auto mb-6 bg-secondary/20 rounded-full flex items-center justify-center">
                 <stat.icon className="w-8 h-8 text-secondary" />
               </div>
+
               <p className="stat-number text-primary-foreground mb-2">
-                {stat.number}
+                <CountUp value={stat.number} />
+                {stat.suffix}
               </p>
+
               <p className="text-primary-foreground font-semibold mb-2">
                 {stat.label}
               </p>
+
               <p className="text-primary-foreground/60 text-sm">
                 {stat.description}
               </p>
