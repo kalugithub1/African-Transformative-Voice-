@@ -2,7 +2,6 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
   Heart,
@@ -56,6 +55,22 @@ const involvementOptions = [
 ];
 
 const GetInvolved = () => {
+  // Smooth scroll to bank details
+  const handleScrollToBank = () => {
+    const section = document.getElementById("bank-details");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  // Smooth scroll to contact section
+  const handleScrollToContact = () => {
+    const section = document.getElementById("contact-section");
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
   return (
     <PageLayout>
       <PageHero
@@ -112,16 +127,34 @@ const GetInvolved = () => {
                 <div className="w-16 h-16 bg-secondary/20 rounded-xl flex items-center justify-center mb-6">
                   <option.icon className="w-8 h-8 text-secondary" />
                 </div>
+
                 <h3 className="text-2xl font-heading font-bold text-foreground mb-4">
                   {option.title}
                 </h3>
+
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   {option.description}
                 </p>
-                <Button variant="outline" className="group">
-                  {option.cta}
-                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-                </Button>
+
+                {option.title === "Donate" ? (
+                  <Button
+                    variant="outline"
+                    className="group"
+                    onClick={handleScrollToBank}
+                  >
+                    {option.cta}
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                ) : (
+                  <Button
+                    variant="outline"
+                    className="group"
+                    onClick={handleScrollToContact}
+                  >
+                    {option.cta}
+                    <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                )}
               </motion.div>
             ))}
           </div>
@@ -129,7 +162,7 @@ const GetInvolved = () => {
       </section>
 
       {/* Bank Account Details Section */}
-      <section className="section-padding bg-background">
+      <section id="bank-details" className="section-padding bg-background">
         <div className="container-wide">
           <SectionHeader
             label="Donate"
@@ -164,12 +197,14 @@ const GetInvolved = () => {
                     {bankDetails.accountName}
                   </span>
                 </div>
+
                 <div className="flex justify-between items-center py-3 border-b border-border">
                   <span className="text-muted-foreground">Paybill</span>
                   <span className="font-semibold text-secondary font-mono">
                     {bankDetails.paybill}
                   </span>
                 </div>
+
                 <div className="flex justify-between items-center py-3">
                   <span className="text-muted-foreground">Account Number</span>
                   <span className="font-semibold text-secondary font-mono">
@@ -183,7 +218,7 @@ const GetInvolved = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="section-padding bg-background">
+      <section id="contact-section" className="section-padding bg-background">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             <motion.div
@@ -236,11 +271,13 @@ const GetInvolved = () => {
               </div>
 
               <div className="mt-8">
-                <Button asChild size="lg">
-                  <Link to="/contact">
-                    Contact Us
-                    <ArrowRight className="ml-2 w-5 h-5" />
-                  </Link>
+                <Button
+                  variant="outline"
+                  className="group"
+                  onClick={handleScrollToContact}
+                >
+                  Contact Us
+                  <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
               </div>
             </motion.div>
@@ -276,6 +313,7 @@ const GetInvolved = () => {
                     />
                   </div>
                 </div>
+
                 <div>
                   <label className="block text-primary-foreground/80 text-sm mb-2">
                     Email
@@ -285,6 +323,7 @@ const GetInvolved = () => {
                     className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary"
                   />
                 </div>
+
                 <div>
                   <label className="block text-primary-foreground/80 text-sm mb-2">
                     How would you like to help?
@@ -308,6 +347,7 @@ const GetInvolved = () => {
                     </option>
                   </select>
                 </div>
+
                 <div>
                   <label className="block text-primary-foreground/80 text-sm mb-2">
                     Message
@@ -318,6 +358,7 @@ const GetInvolved = () => {
                     placeholder="Tell us more about how you'd like to help..."
                   />
                 </div>
+
                 <Button
                   type="submit"
                   size="lg"
