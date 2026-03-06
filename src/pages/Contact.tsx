@@ -142,11 +142,10 @@ const Contact = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {/* Web3Forms Hidden Inputs */}
 
-                {/* ATV Access_key:3a234b5a-4fb6-4764-98f6-13241f0eb5a4  */}
                 <input
                   type="hidden"
                   name="access_key"
-                  value="b3d7a4c8-ba24-4cb3-a178-c3acdf199632"
+                  value="3a234b5a-4fb6-4764-98f6-13241f0eb5a4"
                 />
 
                 <input
