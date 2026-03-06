@@ -3,6 +3,8 @@ import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Heart,
   HandHelping,
@@ -12,6 +14,7 @@ import {
   Mail,
   Phone,
   Building2,
+  X,
 } from "lucide-react";
 
 import heroImage from "@/assets/mentoring.jpeg";
@@ -55,6 +58,10 @@ const involvementOptions = [
 ];
 
 const GetInvolved = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [status, setStatus] = useState(null); // null | "success" | "error"
+  const [loading, setLoading] = useState(false);
+
   // Smooth scroll to bank details
   const handleScrollToBank = () => {
     const section = document.getElementById("bank-details");
@@ -68,6 +75,35 @@ const GetInvolved = () => {
     const section = document.getElementById("contact-section");
     if (section) {
       section.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    setStatus(null);
+
+    const formData = new FormData(e.target);
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        setStatus("success");
+        setShowModal(true);
+        e.target.reset();
+      } else {
+        setStatus("error");
+      }
+    } catch (err) {
+      setStatus("error");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -161,7 +197,7 @@ const GetInvolved = () => {
         </div>
       </section>
 
-      {/* Bank Account Details Section */}
+      {/* Bank Details */}
       <section id="bank-details" className="section-padding bg-background">
         <div className="container-wide">
           <SectionHeader
@@ -221,6 +257,7 @@ const GetInvolved = () => {
       <section id="contact-section" className="section-padding bg-background">
         <div className="container-wide">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+            {/* LEFT SIDE */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -232,10 +269,10 @@ const GetInvolved = () => {
                 title="Let's Connect"
                 centered={false}
               />
+
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Whether you want to volunteer, donate, or explore partnership
-                opportunities, we'd love to hear from you. Reach out to us and
-                let's discuss how you can make a difference.
+                opportunities, we'd love to hear from you.
               </p>
 
               <div className="space-y-6">
@@ -271,17 +308,19 @@ const GetInvolved = () => {
               </div>
 
               <div className="mt-8">
-                <Button
-                  variant="outline"
-                  className="group"
-                  onClick={handleScrollToContact}
-                >
-                  Contact Us
-                  <ArrowRight className="ml-2 w-5 h-5" />
-                </Button>
+                <Link to="/contact">
+                  <Button
+                    variant="outline"
+                    className="group"
+                    onClick={handleScrollToContact}
+                  >
+                    Contact Us <ArrowRight className="ml-2 w-5 h-5" />{" "}
+                  </Button>
+                </Link>
               </div>
             </motion.div>
 
+            {/* FORM */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -292,22 +331,53 @@ const GetInvolved = () => {
               <h3 className="text-2xl font-heading font-bold text-primary-foreground mb-6">
                 Quick Inquiry
               </h3>
-              <form className="space-y-6">
+
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <input
+                  type="hidden"
+                  name="access_key"
+                  value="bf8a57e9-0d56-4cfd-b3ab-253e41dd4c39"
+                />
+
+                <input
+                  type="hidden"
+                  name="subject"
+                  value="New Inquiry from ATV Website"
+                />
+
+                <input
+                  type="hidden"
+                  name="from_name"
+                  value="ATV Website"
+                ></input>
+
+                <input type="hidden" name="reply_to" value="email" />
+                <input
+                  type="hidden"
+                  name="_from_name"
+                  value="African Transformative Voice website Inquiry form"
+                />
+
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-primary-foreground/80 text-sm mb-2">
                       First Name
                     </label>
                     <input
+                      name="first_name"
                       type="text"
+                      required
                       className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary"
                     />
                   </div>
+
                   <div>
                     <label className="block text-primary-foreground/80 text-sm mb-2">
                       Last Name
                     </label>
                     <input
+                      required
+                      name="last_name"
                       type="text"
                       className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary"
                     />
@@ -319,7 +389,9 @@ const GetInvolved = () => {
                     Email
                   </label>
                   <input
+                    name="email"
                     type="email"
+                    required
                     className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary"
                   />
                 </div>
@@ -328,7 +400,10 @@ const GetInvolved = () => {
                   <label className="block text-primary-foreground/80 text-sm mb-2">
                     How would you like to help?
                   </label>
-                  <select className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground focus:outline-none focus:ring-2 focus:ring-secondary">
+                  <select
+                    name="help_type"
+                    className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground focus:outline-none focus:ring-2 focus:ring-secondary"
+                  >
                     <option value="">Select an option</option>
                     <option className="text-black" value="donate">
                       Donate
@@ -353,6 +428,8 @@ const GetInvolved = () => {
                     Message
                   </label>
                   <textarea
+                    name="message"
+                    required
                     rows={4}
                     className="w-full px-4 py-3 rounded-lg bg-primary-foreground/10 border border-primary-foreground/20 text-primary-foreground placeholder:text-primary-foreground/50 focus:outline-none focus:ring-2 focus:ring-secondary resize-none"
                     placeholder="Tell us more about how you'd like to help..."
@@ -371,6 +448,59 @@ const GetInvolved = () => {
           </div>
         </div>
       </section>
+
+      {/* Success Modal */}
+      {showModal && (
+        <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+          <div className="bg-white rounded-xl p-10 max-w-md w-full text-center shadow-xl relative">
+            {/* Close icon */}
+            <button
+              className="absolute top-4 right-4 text-gray-400 hover:text-gray-700"
+              onClick={() => setShowModal(false)}
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Green Check Circle */}
+            <div className="flex justify-center mb-6">
+              <div className="w-20 h-20 rounded-full border-4 border-green-500 flex items-center justify-center">
+                <svg
+                  className="w-10 h-10 text-green-500"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M5 13l4 4L19 7"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            {/* Title */}
+            <h2 className="text-2xl font-semibold text-green-600 mb-3">
+              Message submitted successfully!
+            </h2>
+
+            {/* Message */}
+            <p className="text-gray-600 mb-6">
+              Thank you! Your inquiry has been received. We will contact you
+              soon.
+            </p>
+
+            {/* Close Button */}
+            <button
+              onClick={() => setShowModal(false)}
+              className="text-blue-600 hover:underline font-medium"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </PageLayout>
   );
 };
