@@ -41,10 +41,10 @@ export const Header = () => {
               <Link
                 key={link.path}
                 to={link.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
+                className={`text-sm font-medium uppercase transition-colors hover:text-primary ${
                   location.pathname === link.path
                     ? "text-primary"
-                    : "text-muted-foreground"
+                    : "text-black/80 dark:text-white/80"
                 }`}
               >
                 {link.name}
@@ -55,7 +55,9 @@ export const Header = () => {
           {/* CTA Button */}
           <div className="hidden lg:block">
             <Button asChild>
-              <Link to="/get-involved">Donate Now</Link>
+              <Link className="uppercase " to="/get-involved">
+                Donate
+              </Link>
             </Button>
           </div>
 
@@ -88,7 +90,7 @@ export const Header = () => {
                   className={`text-lg font-medium py-2 transition-colors hover:text-primary ${
                     location.pathname === link.path
                       ? "text-primary"
-                      : "text-muted-foreground"
+                      : "text-black/80 dark:text-white/80"
                   }`}
                 >
                   {link.name}
