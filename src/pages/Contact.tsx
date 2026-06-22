@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Send, X } from "lucide-react";
 
 import heroImage from "@/assets/certificate.jpeg";
+import { Helmet } from "react-helmet-async";
 
 const Contact = () => {
   const [status, setStatus] = useState(null); // null | "success" | "error"
@@ -44,6 +45,19 @@ const Contact = () => {
 
   return (
     <PageLayout>
+      <Helmet>
+        <title>Contact Us | African Transformative Voice</title>
+        <meta
+          name="description"
+          content="Reach African Transformative Voice by phone, email, or our contact form. We are located in Nakuru, Kenya and respond within 24–48 hours."
+        />
+        <link rel="canonical" href="https://www.africantransformativevoice.org/contact" />
+        <meta property="og:title" content="Contact Us | African Transformative Voice" />
+        <meta property="og:description" content="Get in touch with ATV by phone, email, or our contact form. Located in Nakuru, Kenya." />
+        <meta property="og:url" content="https://www.africantransformativevoice.org/contact" />
+        <meta name="twitter:title" content="Contact Us | African Transformative Voice" />
+        <meta name="twitter:description" content="Get in touch with ATV by phone, email, or our contact form. Located in Nakuru, Kenya." />
+      </Helmet>
       <PageHero
         title="Contact Us"
         subtitle="Have a question or want to support us? We'd love to hear from you."

@@ -6,6 +6,7 @@ import { Target, Eye, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 import heroImage from "@/assets/digital-literacy.jpeg";
 import trainingImage from "@/assets/digital-training.jpeg";
@@ -89,6 +90,19 @@ const boardMembers = [
 const About = () => {
   return (
     <PageLayout>
+      <Helmet>
+        <title>About Us | African Transformative Voice</title>
+        <meta
+          name="description"
+          content="Learn about ATV's story, mission, vision, and the founders driving transformation for refugee youth in Nakuru, Kenya since 2020."
+        />
+        <link rel="canonical" href="https://www.africantransformativevoice.org/about" />
+        <meta property="og:title" content="About Us | African Transformative Voice" />
+        <meta property="og:description" content="Learn about ATV's story, mission, vision, and the team empowering refugee youth in Nakuru, Kenya." />
+        <meta property="og:url" content="https://www.africantransformativevoice.org/about" />
+        <meta name="twitter:title" content="About Us | African Transformative Voice" />
+        <meta name="twitter:description" content="Learn about ATV's story, mission, vision, and the team empowering refugee youth in Nakuru, Kenya." />
+      </Helmet>
       <PageHero
         title="About African Transformative Voice"
         subtitle="Empowering African youth through education, advocacy, and sustainable development since 2020."

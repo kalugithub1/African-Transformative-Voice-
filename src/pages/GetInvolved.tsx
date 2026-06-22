@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 
 import heroImage from "@/assets/mentoring.jpeg";
+import { Helmet } from "react-helmet-async";
 
 const bankDetails = {
   bankName: "Equity Bank",
@@ -109,6 +110,19 @@ const GetInvolved = () => {
 
   return (
     <PageLayout>
+      <Helmet>
+        <title>Get Involved | Donate, Volunteer or Partner — ATV</title>
+        <meta
+          name="description"
+          content="Support African Transformative Voice. Donate, volunteer, sponsor a student, or partner with us to empower refugee youth in Nakuru, Kenya."
+        />
+        <link rel="canonical" href="https://www.africantransformativevoice.org/get-involved" />
+        <meta property="og:title" content="Get Involved | African Transformative Voice" />
+        <meta property="og:description" content="Donate, volunteer, sponsor a student, or partner with ATV to empower refugee youth in Kenya." />
+        <meta property="og:url" content="https://www.africantransformativevoice.org/get-involved" />
+        <meta name="twitter:title" content="Get Involved | African Transformative Voice" />
+        <meta name="twitter:description" content="Donate, volunteer, sponsor a student, or partner with ATV to empower refugee youth in Kenya." />
+      </Helmet>
       <PageHero
         title="Get Involved"
         subtitle="Join our movement to empower African youth through education, mentorship, and sustainable development."

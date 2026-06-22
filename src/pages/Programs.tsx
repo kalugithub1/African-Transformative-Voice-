@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, GraduationCap, Users, Monitor, TreePine } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 import heroImage from "@/assets/environment.jpeg";
 import scholarshipImg from "@/assets/scholarship.png";
@@ -30,6 +31,19 @@ const galleryImages = [
 const Programs = () => {
   return (
     <PageLayout>
+      <Helmet>
+        <title>Our Programs | Scholarships, Mentorship & Digital Literacy — ATV</title>
+        <meta
+          name="description"
+          content="Explore ATV's programs: refugee scholarships, youth mentorship, digital literacy training, and environmental preservation in Nakuru, Kenya."
+        />
+        <link rel="canonical" href="https://www.africantransformativevoice.org/programs" />
+        <meta property="og:title" content="Our Programs | African Transformative Voice" />
+        <meta property="og:description" content="Scholarships, mentorship, digital literacy, and environmental preservation for refugee youth in Nakuru, Kenya." />
+        <meta property="og:url" content="https://www.africantransformativevoice.org/programs" />
+        <meta name="twitter:title" content="Our Programs | African Transformative Voice" />
+        <meta name="twitter:description" content="Scholarships, mentorship, digital literacy, and environmental preservation for refugee youth in Nakuru, Kenya." />
+      </Helmet>
       <PageHero
         title="Our Programs"
         subtitle="Empowering youth through comprehensive programs in education, mentorship, digital skills, and environmental action."
