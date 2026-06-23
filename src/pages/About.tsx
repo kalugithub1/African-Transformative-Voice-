@@ -70,11 +70,7 @@ const boardMembers = [
     role: "Refugee researcher and advocate",
     image: boardAndhira,
   },
-  {
-    name: "Nyok Luat Dudi",
-    role: "Co-Founder ATV | Manager | Leader",
-    image: teamLuat,
-  },
+
   {
     name: "Divine Mugisha",
     role: "Founder/CEO Supportive Pillar organization",
@@ -96,12 +92,30 @@ const About = () => {
           name="description"
           content="Learn about ATV's story, mission, vision, and the founders driving transformation for refugee youth in Nakuru, Kenya since 2020."
         />
-        <link rel="canonical" href="https://www.africantransformativevoice.org/about" />
-        <meta property="og:title" content="About Us | African Transformative Voice" />
-        <meta property="og:description" content="Learn about ATV's story, mission, vision, and the team empowering refugee youth in Nakuru, Kenya." />
-        <meta property="og:url" content="https://www.africantransformativevoice.org/about" />
-        <meta name="twitter:title" content="About Us | African Transformative Voice" />
-        <meta name="twitter:description" content="Learn about ATV's story, mission, vision, and the team empowering refugee youth in Nakuru, Kenya." />
+        <link
+          rel="canonical"
+          href="https://www.africantransformativevoice.org/about"
+        />
+        <meta
+          property="og:title"
+          content="About Us | African Transformative Voice"
+        />
+        <meta
+          property="og:description"
+          content="Learn about ATV's story, mission, vision, and the team empowering refugee youth in Nakuru, Kenya."
+        />
+        <meta
+          property="og:url"
+          content="https://www.africantransformativevoice.org/about"
+        />
+        <meta
+          name="twitter:title"
+          content="About Us | African Transformative Voice"
+        />
+        <meta
+          name="twitter:description"
+          content="Learn about ATV's story, mission, vision, and the team empowering refugee youth in Nakuru, Kenya."
+        />
       </Helmet>
       <PageHero
         title="About African Transformative Voice"
