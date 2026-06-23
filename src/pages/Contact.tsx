@@ -51,12 +51,30 @@ const Contact = () => {
           name="description"
           content="Reach African Transformative Voice by phone, email, or our contact form. We are located in Nakuru, Kenya and respond within 24–48 hours."
         />
-        <link rel="canonical" href="https://www.africantransformativevoice.org/contact" />
-        <meta property="og:title" content="Contact Us | African Transformative Voice" />
-        <meta property="og:description" content="Get in touch with ATV by phone, email, or our contact form. Located in Nakuru, Kenya." />
-        <meta property="og:url" content="https://www.africantransformativevoice.org/contact" />
-        <meta name="twitter:title" content="Contact Us | African Transformative Voice" />
-        <meta name="twitter:description" content="Get in touch with ATV by phone, email, or our contact form. Located in Nakuru, Kenya." />
+        <link
+          rel="canonical"
+          href="https://www.africantransformativevoice.org/contact"
+        />
+        <meta
+          property="og:title"
+          content="Contact Us | African Transformative Voice"
+        />
+        <meta
+          property="og:description"
+          content="Get in touch with ATV by phone, email, or our contact form. Located in Nakuru, Kenya."
+        />
+        <meta
+          property="og:url"
+          content="https://www.africantransformativevoice.org/contact"
+        />
+        <meta
+          name="twitter:title"
+          content="Contact Us | African Transformative Voice"
+        />
+        <meta
+          name="twitter:description"
+          content="Get in touch with ATV by phone, email, or our contact form. Located in Nakuru, Kenya."
+        />
       </Helmet>
       <PageHero
         title="Contact Us"
@@ -112,7 +130,7 @@ const Contact = () => {
                 href="mailto:africantransformativevoice@gmail.com"
                 className="text-primary hover:underline break-all"
               >
-                africantransformativevoice@gmail.com
+                info@africantransformativevoice.org
               </a>
             </motion.div>
 

@@ -12,7 +12,7 @@ export const PageHero = ({
   backgroundImage,
 }: PageHeroProps) => {
   return (
-    <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+    <section className="relative h-[70vh] min-h-[400px] flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       {backgroundImage && (
         <div className="absolute inset-0">

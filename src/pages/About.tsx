@@ -15,10 +15,10 @@ import teamLuat from "@/assets/team-luat.jpeg";
 import teamSantino from "@/assets/team-Santino.jpeg";
 import teamMaker from "@/assets/team-maker.jpeg";
 import teamAkuok from "@/assets/akuok-image.jpeg";
-import teamAluong from "@/assets/team-Aluong.jpeg";
-import boardAndhira from "@/assets/board-andhira.jpeg";
+import teamAluong from "@/assets/team-Aluong.jpg";
+import boardAndhira from "@/assets/board-andhira.jpg";
 import boardDivine from "@/assets/board-divine.jpeg";
-import boardNicholas from "@/assets/board-nicholas.jpeg";
+import boardNicholas from "@/assets/board-nicholas.jpg";
 
 const objectives = [
   "To increase access to quality education to the children from disadvantaged backgrounds.",
@@ -379,7 +379,7 @@ const About = () => {
 
           {/* Board of Directors */}
           <SectionHeader label="Leadership" title="Board of Directors" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4 lg:px-0 max-w-5xl mx-auto">
             {boardMembers.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -389,7 +389,7 @@ const About = () => {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="bg-card rounded-xl overflow-hidden shadow-lg text-center"
               >
-                <div className="h-56 bg-muted overflow-hidden">
+                <div className="h-60 bg-muted overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
