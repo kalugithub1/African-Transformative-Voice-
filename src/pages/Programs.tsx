@@ -2,6 +2,7 @@ import { PageLayout } from "@/components/layout/PageLayout";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { motion } from "framer-motion";
+// SectionHeader kept for Programs Overview section
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
@@ -18,23 +19,8 @@ import heroImage from "@/assets/environment.jpeg";
 import scholarshipImg from "@/assets/scholarship.png";
 import mentoringImg from "@/assets/mentorship-poster.jpg";
 import digitalImg from "@/assets/digital-training.jpeg";
-import digitalLiteracyImg from "@/assets/digital-literacy.jpeg";
-import environmentImg from "@/assets/environment.jpeg";
 import environment2Img from "@/assets/environment2.jpeg";
-import certificateImg from "@/assets/certificate.jpeg";
-import heroStudentsImg from "@/assets/hero-students.jpeg";
 import tailoringImg from "@/assets/img/tailoring_img2.webp";
-
-const galleryImages = [
-  { src: scholarshipImg, caption: "Scholarship Program" },
-  { src: mentoringImg, caption: "Mentorship Sessions" },
-  { src: digitalImg, caption: "Digital Literacy Training" },
-  { src: certificateImg, caption: "Certificate Ceremony" },
-  { src: digitalLiteracyImg, caption: "Computer Training" },
-  { src: heroStudentsImg, caption: "Student Group" },
-  { src: environmentImg, caption: "Environmental Initiative" },
-  { src: environment2Img, caption: "Brick Making Project" },
-];
 
 const Programs = () => {
   return (
@@ -351,41 +337,6 @@ const Programs = () => {
                 />
               </div>
             </motion.div>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery Section */}
-      <section className="section-padding bg-background">
-        <div className="container-wide">
-          <SectionHeader
-            label="Gallery"
-            title="Our Projects in Action"
-            description="A glimpse into the transformative work happening across our programs."
-          />
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            {galleryImages.map((image, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="group relative rounded-xl overflow-hidden shadow-lg aspect-square"
-              >
-                <img
-                  src={image.src}
-                  alt={image.caption}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-primary-foreground font-medium text-sm">
-                    {image.caption}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
           </div>
         </div>
       </section>
