@@ -12,6 +12,7 @@ import heroImage from "@/assets/digital-literacy.jpeg";
 import trainingImage from "@/assets/digital-training.jpeg";
 import orgStructure from "@/assets/org-structure.png";
 import teamLuat from "@/assets/team-luat.jpeg";
+import teamsaleh from "@/assets/img/kumi-saleh.jpg";
 import teamSantino from "@/assets/team-Santino.jpeg";
 import teamMaker from "@/assets/team-maker.jpeg";
 import teamAkuok from "@/assets/akuok-image.jpeg";
@@ -80,6 +81,29 @@ const boardMembers = [
     name: "Nicholas Sitso Kwashi Amessouwoe",
     role: "Writer | Poet | Author | Leader | Early Career Researcher",
     image: boardNicholas,
+  },
+];
+
+const managementTeam = [
+  {
+    name: "Santino Geng",
+    role: "Chief Executive Officer",
+    image: teamSantino,
+  },
+  {
+    name: "Kumi Saleh",
+    role: "Program Lead",
+    image: teamsaleh,
+  },
+  {
+    name: "Maker Panom Chuol",
+    role: "General Secretary",
+    image: teamMaker,
+  },
+  {
+    name: "Aluong Deng Dau",
+    role: "Director",
+    image: teamAluong,
   },
 ];
 
@@ -315,7 +339,7 @@ const About = () => {
           <SectionHeader
             label="Our Team"
             title="Meet the Founders"
-            description="African Transformative Voice was founded by eight individuals driven by the challenges faced by refugee students in accessing education."
+            description="African Transformative Voice was founded by  individuals driven by the challenges faced by refugee students in accessing education."
           />
 
           {/* Founders Story */}
@@ -407,6 +431,63 @@ const About = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+
+          {/* Management Team */}
+          <div className="mt-24">
+            <SectionHeader label="Operations" title="Management Team" />
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+              className="max-w-3xl mx-auto text-center mb-12"
+            >
+              <p className=" leading-relaxed">
+                Behind every program, workshop, and community initiative is a
+                dedicated management team rolling up their sleeves day after
+                day. Their tireless work on the ground, from coordinating
+                education outreach to building trust within refugee communities,
+                is the heartbeat of everything ATV stands for. We are deeply
+                proud of the commitment and passion they bring to this mission.
+              </p>
+            </motion.div>
+            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              {managementTeam.map((member, index) => (
+                <motion.div
+                  key={member.name}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="bg-card rounded-xl overflow-hidden shadow-lg text-center group"
+                >
+                  <div className="h-56 bg-muted overflow-hidden">
+                    {member.image ? (
+                      <img
+                        src={member.image}
+                        alt={member.name}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center bg-primary/10">
+                        <span className="text-4xl font-heading font-bold text-primary/40">
+                          {member.name.charAt(0)}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-5">
+                    <h4 className="font-heading font-semibold text-foreground mb-1">
+                      {member.name}
+                    </h4>
+                    <p className="text-sm text-primary font-medium mb-1">
+                      {member.role}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-import heroImage from "@/assets/environment.jpeg";
+import heroImage from "@/assets/environment.jpg";
 import scholarshipImg from "@/assets/scholarship.png";
 import mentoringImg from "@/assets/mentorship-poster.jpg";
 import digitalImg from "@/assets/digital-training.jpeg";

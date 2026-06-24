@@ -116,12 +116,30 @@ const GetInvolved = () => {
           name="description"
           content="Support African Transformative Voice. Donate, volunteer, sponsor a student, or partner with us to empower refugee youth in Nakuru, Kenya."
         />
-        <link rel="canonical" href="https://www.africantransformativevoice.org/get-involved" />
-        <meta property="og:title" content="Get Involved | African Transformative Voice" />
-        <meta property="og:description" content="Donate, volunteer, sponsor a student, or partner with ATV to empower refugee youth in Kenya." />
-        <meta property="og:url" content="https://www.africantransformativevoice.org/get-involved" />
-        <meta name="twitter:title" content="Get Involved | African Transformative Voice" />
-        <meta name="twitter:description" content="Donate, volunteer, sponsor a student, or partner with ATV to empower refugee youth in Kenya." />
+        <link
+          rel="canonical"
+          href="https://www.africantransformativevoice.org/get-involved"
+        />
+        <meta
+          property="og:title"
+          content="Get Involved | African Transformative Voice"
+        />
+        <meta
+          property="og:description"
+          content="Donate, volunteer, sponsor a student, or partner with ATV to empower refugee youth in Kenya."
+        />
+        <meta
+          property="og:url"
+          content="https://www.africantransformativevoice.org/get-involved"
+        />
+        <meta
+          name="twitter:title"
+          content="Get Involved | African Transformative Voice"
+        />
+        <meta
+          name="twitter:description"
+          content="Donate, volunteer, sponsor a student, or partner with ATV to empower refugee youth in Kenya."
+        />
       </Helmet>
       <PageHero
         title="Get Involved"
@@ -315,7 +333,7 @@ const GetInvolved = () => {
                       href="mailto:africantransformativevoice@gmail.com"
                       className="text-primary hover:underline"
                     >
-                      africantransformativevoice@gmail.com
+                      info@africantransformativevoice.org
                     </a>
                   </div>
                 </div>

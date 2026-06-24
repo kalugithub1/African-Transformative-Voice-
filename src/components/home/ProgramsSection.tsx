@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { GraduationCap, Users, Monitor, TreePine, ArrowRight } from "lucide-react";
+import {
+  GraduationCap,
+  Users,
+  Monitor,
+  TreePine,
+  ArrowRight,
+} from "lucide-react";
 
 import scholarshipImg from "@/assets/scholarship.png";
 import mentoringImg from "@/assets/mentoring.jpeg";
 import digitalImg from "@/assets/digital-training.jpeg";
-import environmentImg from "@/assets/environment.jpeg";
+import environmentImg from "@/assets/environment1.jpeg";
 
 const programs = [
   {

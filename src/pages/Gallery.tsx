@@ -6,18 +6,25 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 import { Helmet } from "react-helmet-async";
 
-import heroImage from "@/assets/environment.jpeg";
+import heroImage from "@/assets/environment.jpg";
 import scholarshipImg from "@/assets/scholarship.png";
 import mentoringImg from "@/assets/mentorship-poster.jpg";
 import digitalImg from "@/assets/digital-training.jpeg";
 import digitalLiteracyImg from "@/assets/digital-literacy.jpeg";
-import environmentImg from "@/assets/environment.jpeg";
+import environmentImg from "@/assets/environment.jpg";
 import environment2Img from "@/assets/environment2.jpeg";
 import certificateImg from "@/assets/certificate.jpeg";
 import heroStudentsImg from "@/assets/hero-students.jpeg";
 import mentoringImg2 from "@/assets/mentoring.jpeg";
 import tailoring1Img from "@/assets/img/tailoring_img1.webp";
 import tailoring2Img from "@/assets/img/tailoring_img2.webp";
+import tailoring3Img from "@/assets/img/tailoring_img3.jpg";
+import tailoring4Img from "@/assets/img/tailoring_img4.jpg";
+import tailoring5Img from "@/assets/img/tailoring_img5.jpg";
+import tailoring6Img from "@/assets/img/tailoring_img6.jpg";
+import tailoring7Img from "@/assets/img/tailoring_img7.jpg";
+import tailoring8Img from "@/assets/img/tailoring_img8.jpg";
+import tailoring9Img from "@/assets/img/tailoring_img9.jpg";
 import mechanic1Img from "@/assets/img/mechanic_img1.webp";
 import mechanic2Img from "@/assets/img/mechanic_img2.webp";
 import mechanic3Img from "@/assets/img/mechanic_img3.webp";
@@ -49,6 +56,13 @@ const galleryImages = [
   { src: heroStudentsImg, caption: "Student Group", category: "Education" },
   { src: tailoring1Img, caption: "Tailoring Workshop", category: "Tailoring" },
   { src: tailoring2Img, caption: "Garment Making", category: "Tailoring" },
+  { src: tailoring3Img, caption: "Tailoring Workshop", category: "Tailoring" },
+  { src: tailoring4Img, caption: "Garment Making", category: "Tailoring" },
+  { src: tailoring5Img, caption: "Tailoring Workshop", category: "Tailoring" },
+  { src: tailoring6Img, caption: "Garment Making", category: "Tailoring" },
+  { src: tailoring7Img, caption: "Tailoring Workshop", category: "Tailoring" },
+  { src: tailoring8Img, caption: "Garment Making", category: "Tailoring" },
+  { src: tailoring9Img, caption: "Tailoring Workshop", category: "Tailoring" },
   { src: mechanic1Img, caption: "Mechanic Training", category: "Vocational" },
   { src: mechanic2Img, caption: "Auto Repair Skills", category: "Vocational" },
   { src: mechanic3Img, caption: "Hands-On Mechanics", category: "Vocational" },

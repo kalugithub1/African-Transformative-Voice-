@@ -42,7 +42,7 @@ export const SectionHeader = ({
       {description && (
         <p
           className={`text-lg leading-relaxed ${
-            light ? "text-primary-foreground/80" : "text-muted-foreground"
+            light ? "text-primary-foreground/80" : "text-foreground"
           }`}
         >
           {description}

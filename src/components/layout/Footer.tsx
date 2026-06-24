@@ -148,7 +148,7 @@ export const Footer = () => {
                   href="mailto:africantransformativevoice@gmail.com"
                   className="text-primary-foreground/70 hover:text-secondary transition-colors text-sm break-all"
                 >
-                  africantransformativevoice@gmail.com
+                  info@africantransformativevoice.org
                 </a>
               </li>
             </ul>
