@@ -13,6 +13,8 @@ import trainingImage from "@/assets/digital-training.jpeg";
 import orgStructure from "@/assets/org-structure.png";
 import teamLuat from "@/assets/team-luat.jpeg";
 import teamsaleh from "@/assets/img/kumi-saleh.jpg";
+import teamawien from "@/assets/img/awien.jpg";
+import teamabuk from "@/assets/img/abuk.jpg";
 import teamSantino from "@/assets/team-Santino.jpeg";
 import teamMaker from "@/assets/team-maker.jpeg";
 import teamAkuok from "@/assets/akuok-image.jpeg";
@@ -89,21 +91,29 @@ const managementTeam = [
     name: "Santino Geng",
     role: "Chief Executive Officer",
     image: teamSantino,
+    description:
+      "Sets the strategic direction for ATV, leading partnerships with schools and community organizations while championing equitable access to education for refugee youth.",
   },
   {
     name: "Kumi Saleh",
     role: "Program Lead",
     image: teamsaleh,
+    description:
+      "Designs and oversees ATV's education and empowerment programs, translating community needs into structured workshops and initiatives with measurable impact.",
   },
   {
-    name: "Maker Panom Chuol",
+    name: "Mabeck Abuk Lueath",
     role: "General Secretary",
-    image: teamMaker,
+    image: teamabuk,
+    description:
+      "Manages organizational records, correspondence, and internal coordination, ensuring ATV's operations run smoothly and stay aligned with its mission.",
   },
   {
-    name: "Aluong Deng Dau",
-    role: "Director",
-    image: teamAluong,
+    name: "Awien Dau Kolnyang",
+    role: "Director of Communications",
+    image: teamawien,
+    description:
+      "Shapes ATV's public voice, telling the stories of refugee youth through outreach, media, and digital platforms to build visibility and support.",
   },
 ];
 
@@ -361,7 +371,7 @@ const About = () => {
           </motion.div>
 
           {/* Founders Grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-20">
+          <div className="flex flex-wrap justify-center gap-10 mb-20">
             {founders.map((founder, index) => (
               <motion.div
                 key={founder.name}
@@ -369,9 +379,9 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl overflow-hidden shadow-lg text-center"
+                className="bg-card rounded-xl overflow-hidden shadow-lg text-center w-full sm:w-80"
               >
-                <div className="h-48 bg-muted overflow-hidden">
+                <div className="h-56 bg-muted overflow-hidden">
                   {founder.image ? (
                     <img
                       src={founder.image}
@@ -387,7 +397,7 @@ const About = () => {
                   )}
                 </div>
                 <div className="p-5">
-                  <h4 className="font-heading font-semibold text-foreground mb-1">
+                  <h4 className="font-heading text-lg font-semibold text-foreground mb-1">
                     {founder.name}
                   </h4>
                   <p className="text-sm text-primary font-medium mb-1">
@@ -403,7 +413,7 @@ const About = () => {
 
           {/* Board of Directors */}
           <SectionHeader label="Leadership" title="Board of Directors" />
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 px-4 lg:px-0 max-w-5xl mx-auto">
+          <div className="flex flex-wrap justify-center gap-6 sm:gap-10 px-4 lg:px-0 overflow-x-auto">
             {boardMembers.map((member, index) => (
               <motion.div
                 key={member.name}
@@ -411,9 +421,9 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-card rounded-xl overflow-hidden shadow-lg text-center"
+                className="bg-card rounded-xl overflow-hidden shadow-lg text-center flex-shrink-0 w-64 sm:w-72 lg:w-80"
               >
-                <div className="h-60 bg-muted overflow-hidden">
+                <div className="h-48 sm:h-52 lg:h-56 bg-muted overflow-hidden">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -452,7 +462,7 @@ const About = () => {
                 proud of the commitment and passion they bring to this mission.
               </p>
             </motion.div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {managementTeam.map((member, index) => (
                 <motion.div
                   key={member.name}
@@ -462,7 +472,8 @@ const About = () => {
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className="bg-card rounded-xl overflow-hidden shadow-lg text-center group"
                 >
-                  <div className="h-56 bg-muted overflow-hidden">
+                  {/* Image + sliding description panel */}
+                  <div className="relative h-61 bg-muted overflow-hidden">
                     {member.image ? (
                       <img
                         src={member.image}
@@ -476,7 +487,21 @@ const About = () => {
                         </span>
                       </div>
                     )}
+
+                    {/* Slide-up description overlay */}
+                    <div
+                      className="absolute inset-0 bg-primary/95 backdrop-blur-sm
+                     flex items-center justify-center p-6
+                     translate-y-full group-hover:translate-y-0
+                     transition-transform duration-500 ease-out"
+                    >
+                      <p className="text-primary-foreground text-sm leading-relaxed">
+                        {member.description}
+                      </p>
+                    </div>
                   </div>
+
+                  {/* Static footer, stays visible below the image */}
                   <div className="p-5">
                     <h4 className="font-heading font-semibold text-foreground mb-1">
                       {member.name}
