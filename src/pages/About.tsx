@@ -37,31 +37,31 @@ const objectives = [
 const founders = [
   {
     name: "Santino Geng",
-    role: "Chief Executive Officer",
-    type: "Founder",
+    role: "",
+    type: "Founder and CEO",
     image: teamSantino,
   },
   {
     name: "Nyok Luat Dudi",
-    role: "Manager",
+    role: "",
     type: "Co-Founder",
     image: teamLuat,
   },
   {
     name: "Maker Panom Chuol",
-    role: "General Secretary",
+    role: "",
     type: "Co-Founder",
     image: teamMaker,
   },
   {
     name: "Aluong Deng Dau",
-    role: "Director",
+    role: "",
     type: "Co-Founder",
     image: teamAluong,
   },
   {
     name: "R. Akuok",
-    role: "Program Coordinator",
+    role: "",
     type: "Co-Founder",
     image: teamAkuok,
   },
