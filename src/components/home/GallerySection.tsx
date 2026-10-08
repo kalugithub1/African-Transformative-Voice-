@@ -11,6 +11,8 @@ import certificateImg from "@/assets/certificate.jpeg";
 import tailoring1Img from "@/assets/img/tailoring_img1.webp";
 import mechanic1Img from "@/assets/img/mechanic_img1.webp";
 import environment2Img from "@/assets/environment2.jpeg";
+import adultEducation2Img from "@/assets/adult-education2.jpeg";
+import adultEducation3Img from "@/assets/adult-education3.jpeg";
 
 const previewImages = [
   {
@@ -34,6 +36,16 @@ const previewImages = [
     src: environment2Img,
     caption: "Brick Making Project",
     category: "Environment",
+  },
+  {
+    src: adultEducation2Img,
+    caption: "Adult Education Program",
+    category: "Adult Education",
+  },
+  {
+    src: adultEducation3Img,
+    caption: "Adult Education Learning",
+    category: "Adult Education",
   },
 ];
 

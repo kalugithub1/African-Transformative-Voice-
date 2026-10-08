@@ -21,6 +21,7 @@ import mentoringImg from "@/assets/mentorship-poster.jpg";
 import digitalImg from "@/assets/digital-training.jpeg";
 import environment2Img from "@/assets/environment2.jpeg";
 import tailoringImg from "@/assets/img/tailoring_img2.webp";
+import adultEducationImg from "@/assets/adult-education.jpeg";
 
 const Programs = () => {
   return (
@@ -226,6 +227,59 @@ const Programs = () => {
                   className="w-full h-[350px] lg:h-[450px] object-cover"
                 />
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+        {/* Adult Education Section */}
+      <section id="adult-education" className="section-padding bg-muted scroll-mt-24">
+        <div className="container-wide">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={adultEducationImg}
+                  alt="Adult education program"
+                  className="w-full h-[350px] lg:h-[450px] object-cover"
+                />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-14 h-14 bg-secondary rounded-xl flex items-center justify-center">
+                  <Monitor className="w-7 h-7 text-secondary-foreground" />
+                </div>
+                <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground">
+                  Adult Education
+                </h2>
+              </div>
+
+              <p className="text-muted-foreground leading-relaxed mb-6">
+                Our Adult Education program provides accessible learning
+                opportunities for adults who have had limited access to formal
+                education. The program focuses on building essential literacy,
+                numeracy, and practical skills that strengthen confidence,
+                independence, and participation in the community.
+              </p>
+
+              <p className="text-muted-foreground leading-relaxed">
+                Through inclusive learning and practical education, we empower
+                adults to pursue further educational opportunities, improve their
+                livelihoods, and contribute meaningfully to their families and
+                communities.
+              </p>
             </motion.div>
           </div>
         </div>
