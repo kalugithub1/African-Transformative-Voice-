@@ -12,6 +12,7 @@ import heroImage from "@/assets/digital-literacy.jpeg";
 import trainingImage from "@/assets/digital-training.jpeg";
 import orgStructure from "@/assets/org-structure.png";
 import teamLuat from "@/assets/team-luat.jpeg";
+import teamOmar from "@assets/team-omar.jpeg"
 import teamsaleh from "@/assets/img/kumi-saleh.jpg";
 import teamawien from "@/assets/img/awien.jpg";
 import teamabuk from "@/assets/img/abuk.jpg";
@@ -44,8 +45,14 @@ const founders = [
   {
     name: "Nyok Luat Dudi",
     role: "",
-    type: "Co-Founder",
+    type: "Operations & Partnership Manager",
     image: teamLuat,
+  },
+   {
+    name: "Kalu Abas Omar",
+    role: "",
+    type: "Chief Technology Officer",
+    image: teamOmar,
   },
   {
     name: "Maker Panom Chuol",
