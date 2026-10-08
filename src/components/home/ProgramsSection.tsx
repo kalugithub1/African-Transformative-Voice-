@@ -13,6 +13,7 @@ import scholarshipImg from "@/assets/scholarship.png";
 import mentoringImg from "@/assets/mentoring.jpeg";
 import digitalImg from "@/assets/digital-training.jpeg";
 import environmentImg from "@/assets/environment1.jpeg";
+import adultEducationImg from "@/assets/adult-education.jpeg";
 
 const programs = [
   {
@@ -42,6 +43,15 @@ const programs = [
     image: digitalImg,
     link: "/programs#digital",
   },
+    {
+    id: "adult-education",
+    icon: GraduationCap,
+    title: "Adult Education",
+    description:
+      "We provide accessible learning opportunities that build essential literacy, numeracy, and practical skills for adults.",
+    image: adultEducationImg,
+    link: "/programs#adult-education",
+  },
   {
     id: "environment",
     icon: TreePine,
@@ -63,7 +73,7 @@ export const ProgramsSection = () => {
           description="Through our comprehensive programs, we provide young people with the tools, guidance, and opportunities they need to thrive."
         />
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {programs.map((program, index) => (
             <motion.div
               key={program.id}
