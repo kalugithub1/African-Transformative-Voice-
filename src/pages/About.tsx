@@ -48,12 +48,6 @@ const founders = [
     type: "Co-Founder & Operations & Partnership Manager",
     image: teamLuat,
   },
-   {
-    name: "Kalu Abas Omar",
-    role: "",
-    type: "Co-Founder & Chief Technology Officer",
-    image: teamOmar,
-  },
   {
     name: "Maker Panom Chuol",
     role: "",
@@ -114,6 +108,20 @@ const managementTeam = [
     image: teamabuk,
     description:
       "Manages organizational records, correspondence, and internal coordination, ensuring ATV's operations run smoothly and stay aligned with its mission.",
+  },
+  {
+    name: "Nyok Luat Dudi",
+    role: "Operations & Partnership Manager",
+    image: teamLuat,
+    description:
+      "Leads ATV's operations and partnership development, coordinating organizational activities and strengthening collaborations that advance ATV's mission and community impact.",
+  },
+  {
+    name: "Omar Abas Omar",
+    role: "Chief Technology Officer",
+    image: teamOmar,
+    description:
+      "Leads ATV's technology strategy and digital initiatives, overseeing technology solutions that support organizational operations, innovation, and digital inclusion.",
   },
   {
     name: "Awien Dau Kolnyang",
